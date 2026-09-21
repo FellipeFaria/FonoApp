@@ -1,7 +1,9 @@
+import 'package:device_preview_plus/device_preview_plus.dart';
 import 'package:flutter/material.dart';
+import 'package:fono_app/views/auth/login_view.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(DevicePreview(builder: ((context) => const MainApp())));
 }
 
 class MainApp extends StatelessWidget {
@@ -9,12 +11,10 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+    return MaterialApp(
+      title: 'FonoApp',
+      debugShowCheckedModeBanner: false,
+      home: LoginView(),
     );
   }
 }
