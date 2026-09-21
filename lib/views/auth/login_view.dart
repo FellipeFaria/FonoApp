@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fono_app/core/app_routes.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
@@ -56,11 +57,6 @@ class _LoginViewState extends State<LoginView> {
                   decoration: InputDecoration(
                     labelText: 'E-mail',
                     prefixIcon: const Icon(Icons.email_outlined),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(16),
-                    ),
-                    filled: true,
-                    fillColor: Colors.grey.shade50,
                   ),
                 ),
 
@@ -81,18 +77,15 @@ class _LoginViewState extends State<LoginView> {
                         });
                       },
                     ),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(16),
-                    ),
-                    filled: true,
-                    fillColor: Colors.grey.shade50,
                   ),
                 ),
 
                 Align(
                   alignment: Alignment.centerRight,
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, AppRoutes.forgotPassword);
+                    },
                     child: const Text(
                       'Esqueceu a senha?',
                       style: TextStyle(color: Colors.deepPurple),
@@ -131,7 +124,9 @@ class _LoginViewState extends State<LoginView> {
                       style: TextStyle(color: Colors.grey),
                     ),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, AppRoutes.sigin);
+                      },
                       child: const Text(
                         'Crie agora',
                         style: TextStyle(
