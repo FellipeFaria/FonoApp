@@ -104,7 +104,9 @@ class _LoginViewState extends State<LoginView> {
                         borderRadius: BorderRadius.circular(16),
                       ),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, AppRoutes.home);
+                    },
                     child: const Text(
                       'ENTRAR',
                       style: TextStyle(
