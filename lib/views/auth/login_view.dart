@@ -105,7 +105,7 @@ class _LoginViewState extends State<LoginView> {
                       ),
                     ),
                     onPressed: () {
-                      Navigator.pushNamed(context, AppRoutes.home);
+                      Navigator.pushNamed(context, AppRoutes.main);
                     },
                     child: const Text(
                       'ENTRAR',
