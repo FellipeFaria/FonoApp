@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fono_app/core/app_routes.dart';
 
 class HomePageView extends StatefulWidget {
   const HomePageView({super.key});
