@@ -146,7 +146,7 @@ class AboutPageView extends StatelessWidget {
 
             const Center(
               child: Text(
-                '© 2026 FonoQuest - Todos os direitos reservados',
+                '© 2026 FonoApp - Todos os direitos reservados',
                 style: TextStyle(fontSize: 12, color: Colors.grey),
               ),
             ),
