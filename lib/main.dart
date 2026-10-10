@@ -7,7 +7,8 @@ import 'package:fono_app/views/auth/login_view.dart';
 import 'package:fono_app/views/auth/signin_view.dart';
 
 void main() {
-  runApp(DevicePreview(builder: ((context) => const MainApp())));
+  runApp(const MainApp());
+  // runApp(DevicePreview(builder: ((context) => const MainApp())));
 }
 
 class MainApp extends StatelessWidget {
