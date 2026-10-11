@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:fono_app/views/exercises/exercise_screen_view.dart';
-import 'package:fono_app/views/exercises/exercises_list/r_phonem_page.dart';
-import 'package:fono_app/views/exercises/exercises_list/vogals_sounds_basic_page.dart';
+import 'package:fono_app/data/mock/mock_lessons_data.dart';
+import 'package:fono_app/models/exercise_model.dart';
+import 'package:fono_app/views/exercises/exercise_engine_view.dart';
 
 class HomePageView extends StatefulWidget {
   const HomePageView({super.key});
@@ -142,11 +142,11 @@ class _HomePageViewState extends State<HomePageView> {
                 onPressed: () {
                   Navigator.pop(ctx);
 
-                  Widget paginaAula;
+                  LessonModel lessonSelecionada;
                   if (exercise['id'] == '1') {
-                    paginaAula = const VogalsSoundsBasicPage();
+                    lessonSelecionada = MockLessonsData.aulaVogais;
                   } else if (exercise['id'] == '2') {
-                    paginaAula = const RPhonemPage();
+                    lessonSelecionada = MockLessonsData.aulaRBrando;
                   } else {
                     return;
                   }
@@ -154,10 +154,8 @@ class _HomePageViewState extends State<HomePageView> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => ExerciseScreenView(
-                        exercisePage: paginaAula,
-                        tituloAula: exercise['titulo'],
-                      ),
+                      builder: (context) =>
+                          ExerciseEngineView(lesson: lessonSelecionada),
                     ),
                   );
                 },
