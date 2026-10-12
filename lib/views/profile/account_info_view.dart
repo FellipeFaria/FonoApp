@@ -215,7 +215,7 @@ class _AccountInfoViewState extends State<AccountInfoView> {
             const SizedBox(height: 6),
             TextField(
               controller: _emailController,
-              enabled: _isEditing,
+              enabled: false,
               decoration: InputDecoration(
                 filled: true,
                 fillColor: _isEditing ? Colors.white : Colors.grey.shade200,
