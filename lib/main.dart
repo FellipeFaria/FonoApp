@@ -5,10 +5,11 @@ import 'package:fono_app/main_screen.dart';
 import 'package:fono_app/views/auth/forgotpassword_view.dart';
 import 'package:fono_app/views/auth/login_view.dart';
 import 'package:fono_app/views/auth/signin_view.dart';
+import 'package:fono_app/views/profile/account_info_view.dart';
 
 void main() {
-  runApp(const MainApp());
-  // runApp(DevicePreview(builder: ((context) => const MainApp())));
+  // runApp(const MainApp());
+  runApp(DevicePreview(builder: ((context) => const MainApp())));
 }
 
 class MainApp extends StatelessWidget {
@@ -35,6 +36,7 @@ class MainApp extends StatelessWidget {
         AppRoutes.sigin: (context) => const SigninView(),
         AppRoutes.forgotPassword: (context) => const ForgotPasswordView(),
         AppRoutes.main: (context) => const MainScreenView(),
+        AppRoutes.accountInfo: (context) => const AccountInfoView(),
       },
     );
   }
