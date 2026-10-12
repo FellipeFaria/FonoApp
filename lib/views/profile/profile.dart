@@ -109,7 +109,7 @@ class ProfilePageView extends StatelessWidget {
                   ),
                   const SizedBox(height: 16),
                   const Text(
-                    'Fellipe Faria',
+                    'John Doe',
                     style: TextStyle(
                       fontSize: 22,
                       fontWeight: FontWeight.w900,

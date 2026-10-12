@@ -10,8 +10,8 @@ class AccountInfoView extends StatefulWidget {
 class _AccountInfoViewState extends State<AccountInfoView> {
   bool _isEditing = false;
 
-  String _name = 'Fellipe Faria';
-  String _email = 'fellipefaria014@gmail.com';
+  String _name = 'John Doe';
+  String _email = 'johndoe@gmail.com';
   String _phone = '16998887766';
   final String _password = '***********';
   final int _accountLevel = 2;
